@@ -7,5 +7,5 @@ import "bootstrap-icons/font/bootstrap-icons.min.css"
   styleUrl: './home.component.css'
 })
 export class HomeComponent {
-
+  
 }
