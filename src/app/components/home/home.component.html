@@ -23,27 +23,33 @@
             <thead>
                 <tr class="">
                     <td>ID</td>
-                    <td>Nome Aluno</td>
+                    <td>Nome do Aluno</td>
                     <td>Idade</td>
                     <td>E-mail</td>
                     <td>Contato</td>
+                    <td>Cidade</td>
+                    <td>Estado</td>
+                    <td>Instituição</td>
                     <td>Ano Letivo</td>
                     <td>Funções</td>
                 </tr>
             </thead>
             <tbody class="table-group-divider">
-                <tr>
-                    <td>ID</td>
-                    <td>Nome Aluno</td>
-                    <td>Idade</td>
-                    <td>E-mail</td>
-                    <td>Contato</td>
-                    <td>Ano Letivo</td>
+                <tr *ngFor="let aluno of alunos">
+                    <td>{{ aluno.id }}</td>
+                    <td>{{ aluno.nomeCompleto }}</td>
+                    <td>{{ aluno.idade }}</td>
+                    <td>{{ aluno.email }}</td>
+                    <td>{{ aluno.telefone }}</td>
+                    <td>{{ aluno.cidade }}</td>
+                    <td>{{ aluno.estado }}</td>
+                    <td>{{ aluno.instituicao }}</td>
+                    <td>{{ aluno.anoLetivo }}</td>
                     <Td class="d-flex gap-3">
                         <button type="button" class="btn btn-primary">
                             <i class="bi bi-pen"></i>
                         </button>
-                        <button type="button" class="btn btn-danger">
+                        <button type="button" class="btn btn-danger" (click)="deleteAluno(aluno.id)">
                             <i class="bi bi-trash"></i>
                         </button>
                     </Td>

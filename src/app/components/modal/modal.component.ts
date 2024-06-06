@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+declare var bootstrap: any;
 
 @Component({
   selector: 'app-modal',
@@ -6,18 +7,14 @@ import { Component } from '@angular/core';
   styleUrl: './modal.component.css'
 })
 export class ModalComponent {
-  abrirModal(){
-    const modalDiv = document.getElementById('modalALunos')
-    if(modalDiv!= null){
-      modalDiv.style.display="block";
-    }
+  abrirModal() {
+    const modal = new bootstrap.Modal(document.getElementById('modalAlunos'));
+    modal.show();
   }
 
-  fecharModal(){
-    const modalDiv= document.getElementById('modalALunos')
-    if(modalDiv!= null){
-      modalDiv.style.display="none";
-    }
+  fecharModal() {
+    const modal = bootstrap.Modal.getInstance(document.getElementById('modalAlunos'));
+    modal.hide();
   }
 
 }

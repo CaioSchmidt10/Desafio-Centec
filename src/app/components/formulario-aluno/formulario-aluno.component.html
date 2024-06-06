@@ -1,0 +1,88 @@
+<form [formGroup]="alunoForm" (ngSubmit)="alunoFormSubmit()">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-6">
+        <div class="mb-3">
+          <label for="nome" class="form-label">Nome Completo</label>
+          <input type="text" class="form-control" id="nome" placeholder="Digite o nome completo" formControlName="nomeCompleto">
+          <div *ngIf="alunoForm.get('nomeCompleto')?.touched && alunoForm.get('nomeCompleto')?.invalid" class="text-danger">
+            Nome completo é obrigatório.
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div class="mb-3">
+          <label for="sobrenome" class="form-label">Idade</label>
+          <input type="number" class="form-control" id="Idade" placeholder="Digite a idade" formControlName="idade">
+          <div *ngIf="alunoForm.get('idade')?.touched && alunoForm.get('idade')?.invalid" class="text-danger">
+            Idade é obrigatória e deve ser maior que zero.
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-6">
+        <div class="mb-3">
+          <label for="email" class="form-label">Email</label>
+          <input type="email" class="form-control" id="email" placeholder="Digite o email" formControlName="email">
+          <div *ngIf="alunoForm.get('email')?.touched && alunoForm.get('email')?.invalid" class="text-danger">
+            Email é obrigatório e deve ser válido.
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div class="mb-3">
+          <label for="telefone" class="form-label">Telefone</label>
+          <input type="text" class="form-control" id="telefone" placeholder="Digite o telefone" formControlName="telefone">
+          <div *ngIf="alunoForm.get('telefone')?.touched && alunoForm.get('telefone')?.invalid" class="text-danger">
+            Telefone é obrigatório.
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-6">
+        <div class="mb-3">
+          <label for="endereco" class="form-label">Cidade</label>
+          <input type="text" class="form-control" id="cidade" placeholder="Digite a cidade" formControlName="cidade">
+          <div *ngIf="alunoForm.get('cidade')?.touched && alunoForm.get('cidade')?.invalid" class="text-danger">
+            Cidade é obrigatória.
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div class="mb-3">
+          <label for="cidade" class="form-label">Estado</label>
+          <input type="text" class="form-control" id="estado" placeholder="Digite a estado" formControlName="estado">
+          <div *ngIf="alunoForm.get('estado')?.touched && alunoForm.get('estado')?.invalid" class="text-danger">
+            Estado é obrigatório.
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-6">
+        <div class="mb-3">
+          <label for="estado" class="form-label">Instituição</label>
+          <input type="text" class="form-control" id="instituicao" placeholder="Digite a instituição" formControlName="instituicao">
+          <div *ngIf="alunoForm.get('instituicao')?.touched && alunoForm.get('instituicao')?.invalid" class="text-danger">
+            Instituição é obrigatória.
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div class="mb-3">
+          <label for="cep" class="form-label">Ano Letivo</label>
+          <input type="text" class="form-control" id="anoLetivo" placeholder="Digite o ano letivo" formControlName="anoLetivo">
+          <div *ngIf="alunoForm.get('anoLetivo')?.touched && alunoForm.get('anoLetivo')?.invalid" class="text-danger">
+            Ano letivo é obrigatório.
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="modal-footer">
+      <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+      <button type="submit" class="btn btn-primary">Salvar</button>
+    </div>
+  </div>
+</form>
