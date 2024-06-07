@@ -1,44 +1,28 @@
-import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
+import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
-
-interface Aluno {
-  id: string;
-  nomeCompleto: string;
-  idade: number;
-  email: string;
-  telefone: string;
-  cidade: string;
-  estado: string;
-  instituicao: string;
-  anoLetivo: string;
-}
 
 @Injectable({
   providedIn: 'root'
 })
 export class AlunosService {
+  private apiUrl = 'http://localhost:3000/alunos'; // URL da API
 
-  private apiUrl = 'http://localhost:3000/alunos';
+  constructor(private http: HttpClient) {}
 
-  constructor(private _http:HttpClient) { }
- 
-  adicionarAluno(data:any){
-    return this._http.post(this.apiUrl,data); 
+  getAlunoList(): Observable<any> {
+    return this.http.get(this.apiUrl);
   }
 
-  getAlunoList(): Observable<Aluno[]> {
-    return this._http.get<Aluno[]>(this.apiUrl);
+  adicionarAluno(aluno: any): Observable<any> {
+    return this.http.post(this.apiUrl, aluno);
   }
 
-  editarAluno(alunoId: string, novoAlunoData: any): Observable<any> {
-    const url = `${this.apiUrl}/${alunoId}`;
-    return this._http.put(url, novoAlunoData);
+  atualizarAluno(id: string, aluno: any): Observable<any> {
+    return this.http.put(`${this.apiUrl}/${id}`, aluno);
   }
-  
 
-  deleteAluno(alunoId: string): Observable<any> {
-    const url = `${this.apiUrl}/${alunoId}`;
-    return this._http.delete(url);
+  deleteAluno(id: string): Observable<any> {
+    return this.http.delete(`${this.apiUrl}/${id}`);
   }
 }

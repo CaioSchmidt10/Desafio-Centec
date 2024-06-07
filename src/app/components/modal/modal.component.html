@@ -1,20 +1,20 @@
 <!-- Button trigger modal -->
-<button (click)="abrirModal()" type="button" class="btn btn-primary d-flex flex-row">
+<button (click)="abrirModal()" type="button" class="btn btn-primary d-flex shadow">
     <i class="bi bi-plus"></i>
     <p>Adicionar Aluno</p>
 </button>
   
   <!-- Modal -->
-  <div class="modal fade" id="modalAlunos" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-    <div class="modal-dialog">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h1 class="modal-title fs-5" id="exampleModalLabel">Cadastre Aluno</h1>
-          <button  type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-        </div>
-        <div class="modal-body">
-          <app-formulario-aluno></app-formulario-aluno>
-        </div>
+<div class="modal fade" id="modalAlunos" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="exampleModalLabel">Cadastre Aluno</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <app-formulario-aluno [alunoData]="alunoData"></app-formulario-aluno>
       </div>
     </div>
   </div>
+</div>

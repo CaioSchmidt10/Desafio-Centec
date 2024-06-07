@@ -9,6 +9,7 @@ import { FormularioAlunoComponent } from './components/formulario-aluno/formular
 import { ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { provideAnimationsAsync } from '@angular/platform-browser/animations/async';
+import { MatDialogModule } from '@angular/material/dialog';
 
 @NgModule({
   declarations: [
@@ -19,6 +20,7 @@ import { provideAnimationsAsync } from '@angular/platform-browser/animations/asy
   ],
   imports: [
     BrowserModule,
+    MatDialogModule,
     AppRoutingModule,
     ReactiveFormsModule,
     HttpClientModule

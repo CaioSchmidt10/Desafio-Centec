@@ -1,7 +1,6 @@
-import { Component, OnInit } from '@angular/core';
-import "bootstrap-icons/font/bootstrap-icons.min.css"
+import { Component, OnInit, ViewChild } from '@angular/core';
 import { AlunosService } from 'src/app/servicos/alunos.service';
-declare var bootstrap: any;
+import { ModalComponent } from '../modal/modal.component';
 
 interface Aluno {
   id: string;
@@ -18,11 +17,13 @@ interface Aluno {
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
-  styleUrl: './home.component.css'
+  styleUrls: ['./home.component.css']
 })
 export class HomeComponent implements OnInit {
-  
   alunos: Aluno[] = [];
+  selectedAluno: Aluno | null = null;
+
+  @ViewChild(ModalComponent) modalComponent!: ModalComponent;
 
   constructor(private alunoService: AlunosService) {}
 
@@ -32,11 +33,16 @@ export class HomeComponent implements OnInit {
     });
   }
 
-
   deleteAluno(alunoId: string): void {
-    alert('Aluno excluido!')
     this.alunoService.deleteAluno(alunoId).subscribe(() => {
       this.alunos = this.alunos.filter(aluno => aluno.id !== alunoId);
+      alert('Aluno excluido!');
     });
+  }
+
+  openEditForm(aluno: Aluno) {
+    this.selectedAluno = aluno;
+    this.modalComponent.alunoData = this.selectedAluno;
+    this.modalComponent.abrirModal();
   }
 }
