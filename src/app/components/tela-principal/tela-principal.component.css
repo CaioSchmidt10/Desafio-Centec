@@ -1,0 +1,29 @@
+.conteudo-principal {
+    max-width: 1500px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+
+.columm-1{
+    background-color: #050C9C;
+    height: 400px;
+    width: 400px;
+    max-height: 1300px;
+}
+
+.columm-2{
+    background-color: #B5C0D0;
+    height: 400px;
+    width: 400px;
+    max-height: 1300px;
+}
+
+.logo{
+    width: 200px;
+    height: auto;
+}
+
+.custom-hover:hover {
+    transition: background-color 0.3s ease;
+}
+  

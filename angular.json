@@ -32,12 +32,12 @@
             "tsConfig": "tsconfig.app.json",
             "assets": [
               {
-                "glob": "**/*",
-                "input": "public"
+                "glob": "*/*",
+                "input": "src/assets/images",
+                "output": "/assets/images/"
               }
             ],
             "styles": [
-              "src/custom-theme.scss",
               "src/styles.css",
               "node_modules/bootstrap/dist/css/bootstrap.min.css",
               "node_modules/bootstrap-icons/font/bootstrap-icons.min.css"

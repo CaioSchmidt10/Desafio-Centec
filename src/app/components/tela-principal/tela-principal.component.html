@@ -1,0 +1,47 @@
+<div class="container-fluid d-flex justify-content-center align-items-center min-vh-100">
+    <div class="conteudo-principal d-flex flex-row" style="gap: 80px;">
+      <div class="container-fluid d-flex flex-column justify-content-center align-items-center rounded columm-1 gap-4 px-4 py-3 shadow-lg">
+        <div>
+          <img src="../../../assets/images/centec-logo.png" alt="logo">
+        </div>
+        <div class="fs-5 text-white text-center mb-2">
+          <p>Bem vindo a Centec!</p>
+          <p>Site para gerenciamento de alunos e professores de instituições</p>
+        </div>
+        <div class="w-100 text-center mt-5">
+          <button routerLink="cadastro" class="btn btn-primary w-100" type="submit">Cadastrar-se</button>
+        </div>
+      </div>
+
+      <div class="container-fluid d-flex flex-column justify-content-start rounded columm-2 px-4 py-4 shadow-lg">
+        <h1 class="fs-3 border-bottom border-dark text-center pb-2">Indentifique-se na Centec!</h1>
+        <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+          <div class="d-flex flex-column gap-3 pt-3">
+            <div>
+              <label for="exampleFormControlInput1" class="form-label px-2">E-mail</label>
+              <input type="email" formControlName="email" class="form-control border-dark" id="exampleFormControlInput1" placeholder="Digite seu e-mail">
+              <div *ngIf="loginForm.get('email')?.invalid && loginForm.get('email')?.touched" class="text-danger">
+                E-mail é obrigatório e deve ser válido.
+              </div>
+            </div>
+            <div>
+              <label for="inputPassword5" class="form-label px-2">Senha</label>
+              <input type="password" formControlName="password" id="inputPassword5" placeholder="Digite sua senha" class="form-control border-dark">
+              <div *ngIf="loginForm.get('password')?.invalid && loginForm.get('password')?.touched" class="text-danger">
+                Senha é obrigatória.
+              </div>
+            </div>
+          </div>
+          <div class="d-flex justify-content-center pt-2">
+            <button type="button" class="btn btn-link text-center custom-hover">
+              <p>Esqueci minha senha</p>
+            </button>
+          </div>
+          <button type="submit" class="btn btn-primary custom-hover mb-3 w-100" [disabled]="loginForm.invalid">Entrar</button>
+        </form>
+        <span class="border-bottom border-dark"></span>
+      </div>
+      
+    </div>
+</div>
+  

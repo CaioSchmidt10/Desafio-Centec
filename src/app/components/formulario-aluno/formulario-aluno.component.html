@@ -33,7 +33,7 @@
       <div class="col-md-6">
         <div class="mb-3">
           <label for="telefone" class="form-label">Telefone</label>
-          <input type="text" class="form-control" id="telefone" placeholder="Digite o telefone" formControlName="telefone">
+          <input type="number" class="form-control" id="telefone" placeholder="Digite o telefone" formControlName="telefone">
           <div *ngIf="alunoForm.get('telefone')?.touched && alunoForm.get('telefone')?.invalid" class="text-danger">
             Telefone é obrigatório.
           </div>

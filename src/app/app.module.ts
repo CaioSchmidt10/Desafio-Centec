@@ -10,13 +10,17 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { provideAnimationsAsync } from '@angular/platform-browser/animations/async';
 import { MatDialogModule } from '@angular/material/dialog';
+import { TelaPrincipalComponent } from './components/tela-principal/tela-principal.component';
+import { TelaCadastroComponent } from './components/tela-cadastro/tela-cadastro.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
     ModalComponent,
-    FormularioAlunoComponent
+    FormularioAlunoComponent,
+    TelaPrincipalComponent,
+    TelaCadastroComponent
   ],
   imports: [
     BrowserModule,

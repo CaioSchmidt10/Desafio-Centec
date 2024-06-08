@@ -1,0 +1,70 @@
+<div class="container-fluid d-flex justify-content-center align-items-center min-vh-100">
+    <div class="bg px-4 py-4 shadow rounded form-container">
+        <h2 class="mb-4 border-bottom border-dark text-center">Cadastre-se agora!</h2>
+        <form class="d-flex flex-column gap-4" [formGroup]="cadastroForm" (ngSubmit)="onSubmit()">
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <label for="nome">Nome Completo</label>
+                        <input type="text" formControlName="nomeCompleto" class="form-control border-dark" id="nome" placeholder="Digite seu nome">
+                        <div *ngIf="cadastroForm.get('nomeCompleto')?.invalid && cadastroForm.get('nomeCompleto')?.touched" class="text-danger">
+                            Nome Completo é obrigatório e deve ser válido.
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <label for="cpf">CPF</label>
+                        <input type="text" formControlName="cpf" class="form-control border-dark" id="cpf" placeholder="Digite seu CPF">
+                        <div *ngIf="cadastroForm.get('cpf')?.invalid && cadastroForm.get('cpf')?.touched" class="text-danger">
+                            CPF é obrigatório e deve ser válido.
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <label for="data">Data de nascimento</label>
+                        <input type="date" formControlName="dataNascimento" class="form-control border-dark" id="data">
+                        <div *ngIf="cadastroForm.get('dataNascimento')?.invalid && cadastroForm.get('dataNascimento')?.touched" class="text-danger">
+                            Data de nascimento é obrigatória e deve ser válida.
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" formControlName="email" class="form-control border-dark" id="email" placeholder="Digite seu email">
+                        <div *ngIf="cadastroForm.get('email')?.invalid && cadastroForm.get('email')?.touched" class="text-danger">
+                            E-mail é obrigatório e deve ser válido.
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <label for="password">Senha</label>
+                        <input type="password" formControlName="password" class="form-control border-dark" id="password" placeholder="Digite sua senha">
+                        <div *ngIf="cadastroForm.get('password')?.invalid && cadastroForm.get('password')?.touched" class="text-danger">
+                            Senha é obrigatória e deve ser válida.
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <label for="repeat-password">Repetir Senha</label>
+                        <input type="password" formControlName="repeatPassword" class="form-control border-dark" id="repeat-password" placeholder="Digite novamente sua senha">
+                        <div *ngIf="cadastroForm.get('repeatPassword')?.invalid && cadastroForm.get('repeatPassword')?.touched" class="text-danger">
+                            Repita novamente sua senha.
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <span class="border-top border-dark"></span>
+            <button routerLink="/" type="button" class="btn btn-link">Ja possui Cadastro? Acesse agora!</button>
+            <button type="submit" class="btn btn-primary" [disabled]="cadastroForm.invalid">Cadastrar</button>
+        </form>
+    </div>
+</div>
