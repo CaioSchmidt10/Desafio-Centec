@@ -1,27 +1,32 @@
-# DesafioAngular
+# Desafio Centec
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 18.0.2.
+Projeto para programa de estagio, utilizando framework Angular e Bootstrap, objetivo é apresentar um gerencimento de alunos, com funcionalidades de adicionar, editar e excluir. O usuario ainda poderá filtrar e ordenar de forma crescente e descrente os alunos, por meio do seu nome.
 
-## Development server
+## Recebendo o projeto
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+- Crie uma nova pasta e abra o git, posteriormente utilize `git remote add {NomedoRepositório} https://github.com/CaioSchmidt10/Desafio-Centec.git` para adicionar o repositório remoto a sua maquina.
+- Utilize `git pull origin master` para receber o projeto.
 
-## Code scaffolding
+## Atulizando
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+- Com o projeto em mãos, abra no VS code e em seguida abra o terminal, utilize `npm install` ou `npm update` para o repositório local receber todas as dependências do projeto.
 
-## Build
+## Iniciando dados mockados
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+- Utilizando do json server, podemos utilizar os dados apresentados ao usuário, utilize `npx json-server db.json` para iniciar o servidor json.
+- Ele irá gerar um link localhost ( http://localhost:3000/alunos ), onde irá mostrar todos os dados dos alunos e onde eles são depositados, clique no link para ser redirecionado no seu browser.
 
-## Running unit tests
+## Iniciando o projeto
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+- Com todas as dependências baixadas e o servidor json incializado, utilize `ng serve` para iniciar o projeto, ele irá gerar um link localhost ( http://localhost:4200 ), clique-o para ser redirecionado ao seu browser com o site funcionando perfeitamente.
 
-## Running end-to-end tests
+**PROJETO INICIALIZADO!**
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+## Framework e serviços utilizados
 
-## Further help
+- **Framework Angular** : para criação de componentes e organização do projeto.
+- **Bootstrap** : para estilização de formularios e botões e responsividade das telas.
+- **Angular Material**: para funcionalidade dos formulários.
+- **Json Server** : para os dados serem mockados e utilizados.
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+
