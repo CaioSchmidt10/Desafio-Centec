@@ -22,6 +22,11 @@ Projeto para programa de estagio, utilizando framework Angular e Bootstrap, obje
 
 **PROJETO INICIALIZADO!**
 
+## Errata
+
+- As funcionalidades de adicionar e editar um aluno não aparecem automaticamente, é preciso reiniciar a pagina para assim o aluno adicionado ou editado apareça corretamente!
+- O botão de adicionar, depois do usuário editar ou tentar editar algum aluno, não se torna funcional, pois continua como a função de editar.
+
 ## Framework e serviços utilizados
 
 - **Framework Angular** : para criação de componentes e organização do projeto.
