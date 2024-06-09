@@ -28,37 +28,15 @@
   },
   "alunos": [
     {
-      "nomeCompleto": "Beatriz Paes Pinto Valença",
-      "idade": 23,
-      "email": "beatriz.paes@gmail.com",
-      "telefone": 81997413064,
-      "cidade": "Jaboatão dos Guararapes",
-      "estado": "Pernambuco",
-      "instituicao": "Porto Digital",
-      "anoLetivo": "3°",
-      "id": "1a93"
-    },
-    {
-      "id": "d1ba",
-      "nomeCompleto": "Caio Schmidt Vasconcelos",
-      "idade": 20,
-      "email": "caio.schmidt@souunit.com.br",
-      "telefone": 81997413064,
-      "cidade": "Jaboatão dos Guararapes",
-      "estado": "Pernambuco",
-      "instituicao": "Unit",
-      "anoLetivo": "3°"
-    },
-    {
-      "id": "9059",
       "nomeCompleto": "teste",
-      "idade": 67,
+      "idade": 1,
       "email": "teste@gmail.com",
-      "telefone": 2223,
-      "cidade": "Jaboatão dos Guararapes",
-      "estado": "Pernambuco",
-      "instituicao": "teste",
-      "anoLetivo": "teste"
+      "telefone": 81900000000,
+      "cidade": "Teste",
+      "estado": "Teste",
+      "instituicao": "Teste",
+      "anoLetivo": "Teste",
+      "id": "9059"
     }
   ]
 }
