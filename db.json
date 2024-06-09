@@ -29,7 +29,7 @@
   "alunos": [
     {
       "nomeCompleto": "teste",
-      "idade": 1,
+      "idade": 20,
       "email": "teste@gmail.com",
       "telefone": 81900000000,
       "cidade": "Teste",
