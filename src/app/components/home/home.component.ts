@@ -63,4 +63,21 @@ export class HomeComponent implements OnInit {
       this.filteredAlunos = [...this.alunos];
     }
   }
+
+  sortAlunos(): void {
+    if (this.filteredAlunos.length > 1) {
+      const firstAluno = this.filteredAlunos[0];
+      const sortedAlunos = [...this.filteredAlunos].sort((a, b) => {
+        if (a.nomeCompleto < b.nomeCompleto) return -1;
+        if (a.nomeCompleto > b.nomeCompleto) return 1;
+        return 0;
+      });
+      if (sortedAlunos[0] === firstAluno) {
+        this.filteredAlunos = sortedAlunos.reverse();
+      } else {
+        this.filteredAlunos = sortedAlunos;
+      }
+    }
+  }
+
 }
