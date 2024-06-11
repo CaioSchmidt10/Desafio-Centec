@@ -29,6 +29,7 @@ Projeto para programa de estagio, utilizando framework Angular e Bootstrap, obje
 
 ## Framework e serviços utilizados
 
+<img src="https://img.shields.io/badge/Angular-DD0031?style=for-the-badge&logo=angular&logoColor=white" /> <img src="https://img.shields.io/badge/TypeScript-3178C6.svg?style=for-the-badge&logo=TypeScript&logoColor=white" /> 
 - **Framework Angular** : para criação de componentes e organização do projeto.
 - **Bootstrap** : para estilização de formularios e botões e responsividade das telas.
 - **Angular Material**: para funcionalidade dos formulários.
